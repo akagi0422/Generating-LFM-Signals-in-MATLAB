@@ -21,5 +21,5 @@ t_LFM = linspace(0, T, N_LFM);  % 在持续时间范围内生成均匀分布的�
 % t = linspace(-T/2, T/2, N); % 双边LFM用这个
 
 % 生成LFM信号
-st = (abs(t_LFM) < T) .* exp(1j * pi * K * t_LFM.^2); % 本地参考信号
+st = (abs(t_LFM) < T) .* exp(1j * pi * K * t_LFM.^2 + 2 * pi * F_start * t_LFM * 1j); % 本地参考信号
 % st = (abs(t) < T/2) .* exp(1j * pi * K * t.^2); % 双边LFM用这个
